@@ -1,4 +1,5 @@
-<!--Open the console to see the calculation and result-->
+<!--Open the html on live server and look into 
+  the console to see the calculation and result-->
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,65 +8,65 @@
   <body>
     <p>
       <button onclick="
-        updateCalculation(1);
+        updateCalc(1);
       ">1</button>
       
       <button onclick="
-        updateCalculation(2);
+        updateCalc(2);
       ">2</button>
 
       <button onclick="
-        updateCalculation(3);
+        updateCalc(3);
       ">3</button>
 
       <button onclick="
-        updateCalculation('+');
+        updateCalc('+');
       ">+</button>
     </p>
 
     <p>
       <button onclick="
-        updateCalculation(4);
+        updateCalc(4);
       ">4</button>
       
       <button onclick="
-        updateCalculation(5);
+        updateCalc(5);
       ">5</button>
 
       <button onclick="
-        updateCalculation(6);
+        updateCalc(6);
       ">6</button>
 
       <button onclick="
-        updateCalculation('-');
+        updateCalc('-');
       ">-</button>
     </p>
 
     <p>
       <button onclick="
-        updateCalculation(7);
+        updateCalc(7);
       ">7</button>
       
       <button onclick="
-        updateCalculation(8);
+        updateCalc(8);
       ">8</button>
 
       <button onclick="
-        updateCalculation(9);
+        updateCalc(9);
       ">9</button>
 
       <button onclick="
-        updateCalculation('*');
+        updateCalc('*');
       ">*</button>
     </p>
 
     <p>
       <button onclick="
-        updateCalculation(0);
+        updateCalc(0);
       ">0</button>
       
       <button onclick="
-        updateCalculation('.');
+        updateCalc('.');
       ">.</button>
 
       <button onclick="
@@ -74,13 +75,13 @@
       ">=</button>
 
       <button onclick="
-        updateCalculation('/');
+        updateCalc('/');
       ">/</button>
     </p>
 
     <p>
       <button onclick="
-        calculation ='';
+        calculation =``;
         console.log(calculation);
       ">Clear</button>
     </p>
@@ -88,7 +89,7 @@
     <script>
       let calculation = '';
 
-      function updateCalculation(value) {
+      function updateCalc(value) {
         calculation += value;
         console.log(calculation);
       }
