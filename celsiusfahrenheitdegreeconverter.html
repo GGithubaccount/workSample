@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>celsius/fahrenheit degree converter</title>
+  </head>
+  <body>
+    
+    <!--Open on liveserver and then open the console to see the result-->
+    
+    <script>
+      function convertToFahrenheit(celsius) {
+        return (celsius * 9 / 5) + 32;
+       }
+
+      function convertToCelsius(fahrenheit) {
+        return (fahrenheit - 32) * 5 / 9;
+      }
+
+      function convertTemperature(degrees, unit) {
+        if ( unit === 'C') {
+          const result = convertToFahrenheit(degrees);
+          return `${result}F`;
+        } else if (unit === 'F') {
+          const result = convertToCelsius(degrees);
+          return `${result}C`;
+        }
+          
+
+      }
+      /* Use the Degree and Unit of what you want to convert as an argument
+      and call the function. For Example "console.log(convertTemperature(10, 'C'));"
+      */
+      </script>
+  </body>
+</html>
