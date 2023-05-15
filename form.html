@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form</title>
+  </head>
+  <body>
+    <form id="mrOrMrs">
+      <label for="formOfAddress">Form of Address:</label>
+      <select id="formOfAddress" name="formOfAddress">
+        <option value="Mr.">Mr.</option>
+        <option value="Mrs.">Mrs.</option>
+      </select>
+      <br>
+      <br>
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" name="firstName" maxlength="30">
+      <br>
+      <br>
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" name="lastName" maxlength="30">
+      <br>
+      <br>
+      <input type="button" value="Send" onclick="form1()">
+    </form>
+    
+    <div id="hi"></div>
+    <script>
+      function form1() {
+        let form = document.getElementById('mrOrMrs');
+        let formOfAddress = form.elements['formOfAddress'].value;
+        let firstName = form.elements['firstName'].value;
+        let lastName = form.elements['lastName'].value;
+        
+        let greeting = document.getElementById('hi');
+        greeting.innerHTML = '<hr>';
+        
+        if (formOfAddress === 'Mr.') {
+          greeting.innerHTML += 'Dear Mr. ' + lastName;
+        } else if (formOfAddress === 'Mrs.') {
+          greeting.innerHTML += 'Dear Mrs. ' + lastName;
+        }
+      }
+    </script>
+  </body>
+</html>
